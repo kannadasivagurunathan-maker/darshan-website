@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Darshan S | Personal Web Address</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+/* ANIMATIONS */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-content {
+    animation: fadeUp 1.2s ease-out;
+}
+
+.card {
+    animation: fadeUp 1s ease forwards;
+}
+
+.card:nth-child(1) { animation-delay: 0.1s; }
+.card:nth-child(2) { animation-delay: 0.2s; }
+.card:nth-child(3) { animation-delay: 0.3s; }
+.card:nth-child(4) { animation-delay: 0.4s; }
+.card:nth-child(5) { animation-delay: 0.5s; }
+.card:nth-child(6) { animation-delay: 0.6s; }
+.card:nth-child(7) { animation-delay: 0.7s; }
+
+body {
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+}
+.school-logo {
+    width: 220px;          /* BIG size */
+    max-width: 100%;       /* prevents overflow */
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+/* HERO */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 10%;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    flex-wrap: wrap;
+}
+
+.profile-pic {
+    width: 220px;                /* smaller size */
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;           /* keeps circle */
+    object-position: center 20%; /* zooms out face */
+    border: 5px solid #00eaff;
+    box-shadow: 0 0 25px rgba(0,234,255,0.5);
+    background-color: #000;
+}
+
+.hero h1 {
+    font-size: 3.2rem;
+}
+
+.hero span {
+    color: #00eaff;
+}
+
+.hero p {
+    margin-top: 10px;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* ===== ANIMATIONS ===== */
+
+/* PHOTO FLOAT ANIMATION */
+@keyframes float {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
+}
+
+.profile-pic {
+    animation: float 4s ease-in-out infinite;
+}
+
+/* NAME SLIDE + GLOW */
+@keyframes slideGlow {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+        text-shadow: none;
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+        text-shadow: 0 0 20px rgba(0,234,255,0.8);
+    }
+}
+
+.hero h1 {
+    animation: slideGlow 1.5s ease forwards;
+}
+
+/* SUBTEXT FADE */
+.hero p {
+    opacity: 0;
+    animation: fadeUp 1.5s ease forwards;
+    animation-delay: 0.8s;
+}
+
+.hero p:nth-child(2) {
+    animation-delay: 1s;
+}
+
+.hero p:nth-child(3) {
+    animation-delay: 1.2s;
+}
+
+/* CARDS FADE UP */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card {
+    animation: fadeUp 1.2s ease forwards;
+}
+
+.name {
+    color: #00eaff;
+    display: inline-block;
+}
+/* INFO SECTION */
+.section {
+    background: #ffffff;
+    color: #333;
+    padding: 80px 10%;
+}
+
+.section h2 {
+    text-align: center;
+    font-size: 2.6rem;
+    margin-bottom: 60px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background: #f4f4f4;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    color: #2c5364;
+}
+
+/* FOOTER */
+footer {
+    background: #0f2027;
+    text-align: center;
+    padding: 30px;
+    color: #aaa;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content">
+
+        <!-- PHOTO -->
+        <img src="photo.jpg" alt="Darshan S Photo" class="profile-pic">
+
+        <div>
+            <h1>Hello, I'm <span class="name">Darshan S</span></h1>
+            <p>Student | Class 9 – Section B</p>
+            <p>Mysore, Karnataka</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- DETAILS -->
+<section class="section">
+    <h2>Personal & Family Details</h2>
+
+    <div class="grid">
+
+        <div class="card">
+            <h3>🎂 Age</h3>
+            <p>14 Years</p>
+        </div>
+
+        <div class="card">
+            <h3>📞 Phone Number</h3>
+            <p>9342980111</p>
+        </div>
+
+        <div class="card">
+    <img src="school-logo.webp" alt="School Logo" class="school-logo">
+    <h3>🏫 School</h3>
+    <p>Baden Powell Public School</p>
+</div>
+
+        <div class="card">
+            <h3>📚 Class & Section</h3>
+            <p>Class 9 – Section B</p>
+        </div>
+
+        <div class="card">
+            <h3>🏠 Address</h3>
+            <p>
+                352/1, A. Ramanna Street,<br>
+                Devaraja Mohalla,<br>
+                Mysore
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>👨 Father</h3>
+            <p>
+                Name: A. Sivagutunathan<br>
+                Phone: 9341090924<br>
+                Alternate: 9448946024
+            </p>
+        </div>
+
+        <div class="card">
+            <h3>👩 Mother</h3>
+            <p>
+                Name: S. Padmavathi<br>
+                Phone: 9448546024
+            </p>
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    © 2026 Darshan S | Personal Web Address
+</footer>
+
+</body>
+</html>
